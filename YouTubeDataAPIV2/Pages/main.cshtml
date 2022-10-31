@@ -1,0 +1,17 @@
+﻿@page
+@model List<YouTubeVideo>
+@{
+}
+<div class="row">
+    @foreach (var video in Model.Videos)
+    {
+        <div class="card m-3 col-md-3 px-0" style="width: 18rem;">
+            <img src="@video.Thumbnail">
+            <div class="card-body">
+                <h5 class="card-title"> <a href="https://www.youtube.com/watch?v=@video.VideoId" target="_blank">@video.Title</a></h5>
+                <p class="card-text"> @video.Description</p>
+                <a href="https://www.youtube.com/watch?v=@video.VideoId" target="_blank" class="btn btn-danger">Watch</a>
+            </div>
+        </div>
+    }
+</div>
